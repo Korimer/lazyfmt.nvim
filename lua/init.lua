@@ -20,4 +20,9 @@ function M.write_shortcut(pkgname)
   )
 end
 
+function M.setup()
+  M.detect_nix()
+  M.create_data_dir()
+end
+
 return M
