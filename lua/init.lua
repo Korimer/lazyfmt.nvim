@@ -18,3 +18,5 @@ function M.write_shortcut(pkgname)
     "#!/usr/bin/env bash\n" .. nix_cmd .. " " .. pkgname .. " --run " .. [[\"\$@\""]]
   )
 end
+
+return M
