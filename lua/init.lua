@@ -22,7 +22,7 @@ function M.write_shortcut(pkgname)
     return
   end
 
-  shortcut:write("#!/usr/bin/env bash\n" .. nix_cmd .. " " .. pkgname .. ' --run ' .. [[\"\$@\""]])
+  shortcut:write("#!/usr/bin/env bash\n" .. nix_cmd .. " " .. pkgname .. ' --run ' .. [[\"\$@\"]])
   shortcut:close()
 
   os.execute("chmod +x " .. filepath)
