@@ -8,6 +8,7 @@ end
 local datadir = nil
 function M.create_data_dir()
   datadir = vim.fn.stdpath("data") .. "/lazyfmt"
+  os.execute("mkdir " .. datadir)
 end
 
 function M.write_shortcut(pkgname)
