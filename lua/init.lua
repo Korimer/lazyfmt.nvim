@@ -33,6 +33,8 @@ function M.setup()
   M.detect_nix()
   M.create_data_dir()
 
+  vim.env.PATH = vim.env.PATH .. ":" .. datadir
+
   vim.api.nvim_create_user_command(
     'LazyLink',
     function(opts)
